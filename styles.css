@@ -373,6 +373,10 @@ nav a:hover { color: var(--ink); border-bottom-color: var(--accent); }
   color: inherit;
 }
 
+/* ---------- Giscus comments ---------- */
+
+.giscus { margin-top: 48px; }
+
 .post-footer {
   margin-top: 44px;
   padding-top: 24px;

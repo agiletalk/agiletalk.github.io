@@ -1,6 +1,28 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>claude에서 opusplan 모드 사용하기 | 찬찬히, 씁니다</title><meta name="twitter:title" content="claude에서 opusplan 모드 사용하기 | 찬찬히, 씁니다"/><meta property="og:title" content="claude에서 opusplan 모드 사용하기 | 찬찬히, 씁니다"/><meta name="description" content="코드로 쓰고, UX로 생각합니다."/><link rel="canonical" href="https://agiletalk.github.io/posts/how-to-use-claude-opusplan-mode"/><meta property="og:site_name" content="찬찬히, 씁니다"/><meta property="og:description" content="코드로 쓰고, UX로 생각합니다."/><meta property="og:url" content="https://agiletalk.github.io/posts/how-to-use-claude-opusplan-mode"/><meta name="twitter:card" content="summary"/><meta name="twitter:description" content="코드로 쓰고, UX로 생각합니다."/><link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.rss"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Nanum+Pen+Script&display=swap"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"/><link rel="stylesheet" href="/styles.css"/><script>function applyTheme(t){document.documentElement.setAttribute('data-theme',t)}
-function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')||'auto';var n=c==='light'?'dark':c==='dark'?'auto':'light';applyTheme(n);try{if(n==='auto'){localStorage.removeItem('theme')}else{localStorage.setItem('theme',n)}}catch(e){}}
+function setGiscusTheme(t){var gt=t==='light'?'light':t==='dark'?'dark':'preferred_color_scheme';var f=document.querySelector('iframe.giscus-frame');if(f){f.contentWindow.postMessage({giscus:{setConfig:{theme:gt}}},'https://giscus.app')}}
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')||'auto';var n=c==='light'?'dark':c==='dark'?'auto':'light';applyTheme(n);setGiscusTheme(n);try{if(n==='auto'){localStorage.removeItem('theme')}else{localStorage.setItem('theme',n)}}catch(e){}}
 (function(){var t=null;try{t=localStorage.getItem('theme')}catch(e){}applyTheme(t==='light'||t==='dark'?t:'auto')})();</script></head><body><div class="wrap"><header><div class="header-row"><div class="brand"><div class="avatar"><img src="/images/profile_512x512.png" alt="찬찬히, 씁니다"/></div><div><h1><a href="/">찬찬히, 씁니다</a></h1><div class="tagline">코드로 쓰고, UX로 생각합니다.</div></div></div><nav><a href="/">Home</a><a class="active" href="/posts">Writing</a><a href="/feed.rss">RSS</a><button class="theme-toggle" onclick="toggleTheme()" title="테마 전환 (라이트 → 다크 → 자동)" aria-label="테마 전환 (라이트 → 다크 → 자동)"></button></nav></div></header><article class="post-article page-top"><div class="post-meta"><span>2026. 2. 19</span><span class="tags"><a href="/tags/claude">#claude</a><a href="/tags/opusplan">#opusplan</a></span></div><h1 class="post-title">claude에서 opusplan 모드 사용하기</h1><div class="post-content"><p>Claude Code에서 plan은 Opus로, 나머지는 Sonnet으로 작업하는 것이 좋다는 팁을 어디선가 본 적이 있다. 다만 설정 방법을 몰라 적용하지 못했는데, 최근 X를 통해 그 방법을 알게 되었다.</p><p>설정하는 방법은 <code>/model opusplan</code> ✅</p><blockquote class="twitter-tweet"><p lang="ko" dir="ltr">클코에서 /model opusplan 치면 새 모드가 언락되는데 이거 쓰면 자동으로 계획만 Opus가 하고 나머지 작업들은 다 Sonnet이 해준다. 찾아보니 2월 9일쯤에 추가된 듯. 이거 왜 숨겨둔 거지. 또 나만 몰랐나. 심지어 공식문서에도 써있음.. <a href="https://t.co/JRtWb2RiJ4">pic.twitter.com/JRtWb2RiJ4</a></p>&mdash; Jang-Ho Hwang (@xrath) <a href="https://x.com/xrath/status/2024138440854417776?ref_src=twsrc%5Etfw">February 18, 2026</a></blockquote>
 <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
-</div><div class="post-footer"><a href="/posts">← 모든 글 보기</a></div></article><footer><div class="sig">agiletalk</div><p>Copyright © 2022–2026 co1dst8 · Powered by <a href="https://github.com/johnsundell/publish">Publish</a> &amp; AgiletalkTheme</p></footer></div></body></html>
+</div><div class="giscus"></div><script>
+(function(){
+var t=null;try{t=localStorage.getItem('theme')}catch(e){}
+var gt=t==='light'?'light':t==='dark'?'dark':'preferred_color_scheme';
+var s=document.createElement('script');
+s.src='https://giscus.app/client.js';
+s.setAttribute('data-repo','agiletalk/blog');
+s.setAttribute('data-repo-id','MDEwOlJlcG9zaXRvcnkyNDQxNjU0MTQ=');
+s.setAttribute('data-category','General');
+s.setAttribute('data-category-id','DIC_kwDODo2rJs4DDLnY');
+s.setAttribute('data-mapping','pathname');
+s.setAttribute('data-strict','0');
+s.setAttribute('data-reactions-enabled','1');
+s.setAttribute('data-emit-metadata','0');
+s.setAttribute('data-input-position','top');
+s.setAttribute('data-theme',gt);
+s.setAttribute('data-lang','ko');
+s.setAttribute('crossorigin','anonymous');
+s.async=true;
+document.querySelector('.giscus').appendChild(s);
+})();
+</script><div class="post-footer"><a href="/posts">← 모든 글 보기</a></div></article><footer><div class="sig">agiletalk</div><p>Copyright © 2022–2026 co1dst8 · Powered by <a href="https://github.com/johnsundell/publish">Publish</a> &amp; AgiletalkTheme</p></footer></div></body></html>
